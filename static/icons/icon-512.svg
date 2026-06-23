@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#141830"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </radialGradient>
+    <radialGradient id="planet" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#7B68EE"/>
+      <stop offset="50%" stop-color="#4B3BA5"/>
+      <stop offset="100%" stop-color="#2A1F5E"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#6C5CE7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#00D4FF" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="512" height="512" rx="100" fill="url(#bg)"/>
+  <!-- Stars -->
+  <circle cx="80" cy="90" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="420" cy="70" r="1" fill="white" opacity="0.5"/>
+  <circle cx="350" cy="430" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="120" cy="380" r="1" fill="white" opacity="0.4"/>
+  <circle cx="450" cy="250" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="60" cy="240" r="1" fill="white" opacity="0.6"/>
+  <circle cx="200" cy="50" r="1" fill="white" opacity="0.5"/>
+  <circle cx="380" cy="150" r="1" fill="white" opacity="0.4"/>
+  <circle cx="150" cy="450" r="1.5" fill="white" opacity="0.5"/>
+  <!-- Planet -->
+  <g filter="url(#glow)">
+    <circle cx="256" cy="270" r="95" fill="url(#planet)"/>
+  </g>
+  <!-- Ring (behind) -->
+  <ellipse cx="256" cy="270" rx="160" ry="35" fill="none" stroke="url(#ring)" stroke-width="8" opacity="0.3" 
+    stroke-dasharray="0,170,320" transform="rotate(-15,256,270)"/>
+  <!-- Planet (foreground) -->
+  <circle cx="256" cy="270" r="95" fill="url(#planet)"/>
+  <!-- Ring (front) -->
+  <ellipse cx="256" cy="270" rx="160" ry="35" fill="none" stroke="url(#ring)" stroke-width="8" opacity="0.8"
+    stroke-dasharray="320,170,0" transform="rotate(-15,256,270)"/>
+  <!-- Text -->
+  <text x="256" y="150" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="44" fill="white" letter-spacing="6" opacity="0.9">ASTRO</text>
+  <text x="256" y="195" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="44" fill="white" letter-spacing="6" opacity="0.9">QUEST</text>
+</svg>

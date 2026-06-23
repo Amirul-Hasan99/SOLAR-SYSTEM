@@ -1,0 +1,18 @@
+{
+  "name": "Astro Quest",
+  "short_name": "AstroQuest",
+  "description": "Game Edukasi Tata Surya 3D - Jelajahi alam semesta dan uji pengetahuanmu!",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0a0e1a",
+  "theme_color": "#0a0e1a",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "./icons/icon-512.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

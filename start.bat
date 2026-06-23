@@ -1,0 +1,6 @@
+@echo off
+echo Menginstal dependensi Astro Quest...
+call npm install
+echo Memulai development server...
+call npm run dev -- --host
+pause
